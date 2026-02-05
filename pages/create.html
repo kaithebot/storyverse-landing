@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Book - StoryVerse Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/sales-funnel.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">StoryVerse Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section create-page">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Step 1 of 4</span>
+                <h1>Create Your Personalized Book</h1>
+                <p class="section-subtitle">Tell us about your child and we'll create a magical story</p>
+            </div>
+
+            <div class="create-form-container">
+                <form id="bookCreationForm" class="create-form">
+                    <!-- Child Information -->
+                    <div class="form-section">
+                        <h2>👶 About Your Child</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="childName">Child's First Name *</label>
+                                <input type="text" id="childName" name="childName" required placeholder="e.g., Marie">
+                            </div>
+                            <div class="form-group">
+                                <label for="childAge">Age *</label>
+                                <select id="childAge" name="childAge" required>
+                                    <option value="">Select age</option>
+                                    <option value="3">3 years</option>
+                                    <option value="4">4 years</option>
+                                    <option value="5">5 years</option>
+                                    <option value="6">6 years</option>
+                                    <option value="7">7 years</option>
+                                    <option value="8">8 years</option>
+                                    <option value="9">9 years</option>
+                                    <option value="10">10 years</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="childGender">Gender</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="girl"> Girl
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="boy"> Boy
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Theme -->
+                    <div class="form-section">
+                        <h2>🎨 Choose Your Cultural Adventure</h2>
+                        <p class="form-hint">Select a theme that resonates with your family's heritage</p>
+                        
+                        <div class="theme-selection">
+                            <label class="theme-card">
+                                <input type="radio" name="theme" value="bretagne">
+                                <div class="theme-content">
+                                    <div class="theme-icon">🧚‍♀️</div>
+                                    <h3>Fées de Bretagne</h3>
+                                    <p>Celtic fairies and Breton legends</p>
+                                </div>
+                            </label>
+                            
+                            <label class="theme-card">
+                                <input type="radio" name="theme" value="provence">
+                                <div class="theme-content">
+                                    <div class="theme-icon">🌊</div>
+                                    <h3>Provençal Legends</h3>
+                                    <p>Mediterranean myths and stories</p>
+                                </div>
+                            </label>
+                            
+                            <label class="theme-card">
+                                <input type="radio" name="theme" value="paris">
+                                <div class="theme-content">
+                                    <div class="theme-icon">🗼</div>
+                                    <h3>Parisian Adventures</h3>
+                                    <p>Magical journeys through Paris</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Photo Upload -->
+                    <div class="form-section">
+                        <h2>📸 Add Photos (Optional)</h2>
+                        <p class="form-hint">Upload photos to see your child in the story illustrations</p>
+                        
+                        <div class="photo-upload-area">
+                            <div class="upload-box">
+                                <div class="upload-icon">📷</div>
+                                <p>Drag & drop photos here or click to browse</p>
+                                <small>Supported: JPG, PNG (Max 5MB each)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Details -->
+                    <div class="form-section">
+                        <h2>✨ Special Details</h2>
+                        <p class="form-hint">Tell us what makes your child special</p>
+                        
+                        <div class="form-group">
+                            <label for="interests">Favorite Activities</label>
+                            <input type="text" id="interests" name="interests" placeholder="e.g., dancing, dinosaurs, painting">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialMoment">Special Moment to Include</label>
+                            <textarea id="specialMoment" name="specialMoment" rows="3" placeholder="e.g., Our family trip to the beach last summer..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-xlarge">
+                            Continue to Preview →
+                        </button>
+                        <p class="form-note">
+                            🎉 <strong>Limited Time:</strong> 20% off your first book + Free shipping
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Progress
