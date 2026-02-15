@@ -4,455 +4,542 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoryVerse Hub - Personalized Stories That Spark Imagination</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Create magical personalized books where your child is the hero. Custom stories, beautiful illustrations, educational content.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #d946ef;
+            --dark: #1e1b4b;
+            --light: #fef3c7;
+            --white: #ffffff;
+            --gray: #4b5563;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Quicksand', sans-serif;
+            background: var(--light);
+            color: var(--dark);
             line-height: 1.6;
-            color: #333;
         }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 1rem 2rem;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #6366f1;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
         .nav-links a {
+            color: var(--dark);
             text-decoration: none;
-            color: #333;
-            margin-left: 2rem;
             font-weight: 500;
             transition: color 0.3s;
         }
-
+        
         .nav-links a:hover {
-            color: #6366f1;
+            color: var(--primary);
         }
-
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+        
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6rem 2rem 4rem;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #fff;
-            color: #6366f1;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .hero-image {
-            margin-top: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: #f9fafb;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #111;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: #111;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 6rem 2rem;
-            background: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: #f9fafb;
-            padding: 2.5rem;
-            border-radius: 16px;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--light) 0%, #fde68a 50%, #fed7aa 100%);
             position: relative;
+            overflow: hidden;
         }
-
-        .quote-icon {
-            font-size: 3rem;
-            color: #6366f1;
-            opacity: 0.3;
+        
+        .hero::before {
+            content: '';
             position: absolute;
-            top: 1rem;
-            left: 1.5rem;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
         }
-
-        .testimonial-card p {
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 1.5rem;
+        
+        .hero-content {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             position: relative;
             z-index: 1;
         }
-
-        .testimonial-author {
-            display: flex;
+        
+        .hero-text {
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .author-info h4 {
-            font-size: 1rem;
-            color: #111;
-            margin-bottom: 0.25rem;
-        }
-
-        .author-info span {
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
             font-size: 0.875rem;
-            color: #666;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
         }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 6rem 2rem;
-            text-align: center;
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
             color: white;
         }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        
+        .features h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
-
-        .newsletter-form {
+        
+        .feature-card p {
+            color: var(--gray);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--dark), #312e81);
+            color: white;
+        }
+        
+        .testimonials h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stars {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 6rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter {
             max-width: 500px;
             margin: 0 auto;
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
         }
-
-        .newsletter-form input {
+        
+        .newsletter input {
             flex: 1;
-            min-width: 250px;
             padding: 1rem 1.5rem;
             border: none;
             border-radius: 50px;
             font-size: 1rem;
-            outline: none;
         }
-
-        .newsletter-form button {
-            padding: 1rem 2.5rem;
-            background: #111;
+        
+        .newsletter button {
+            background: var(--dark);
             color: white;
             border: none;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.3s, background 0.3s;
+            transition: transform 0.3s;
         }
-
-        .newsletter-form button:hover {
-            transform: translateY(-2px);
-            background: #222;
+        
+        .newsletter button:hover {
+            transform: scale(1.05);
         }
-
+        
         /* Footer */
         footer {
-            background: #111;
+            background: var(--dark);
             color: white;
-            padding: 3rem 2rem;
+            padding: 3rem 0;
             text-align: center;
         }
-
+        
         footer p {
-            opacity: 0.7;
+            opacity: 0.8;
         }
-
+        
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
             
             .nav-links {
                 display: none;
             }
-
-            .features-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
+    <header>
+        <nav class="container">
             <div class="logo">StoryVerse Hub</div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#newsletter">Newsletter</a>
-            </div>
-        </div>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#create">Create</a></li>
+            </ul>
+            <a href="#create" class="btn-primary">Start Creating</a>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Personalized Stories That Spark Imagination</h1>
-            <p>Create magical, one-of-a-kind books where your child becomes the hero of their own adventure. Every story is uniquely crafted to inspire, educate, and entertain.</p>
-            <a href="#newsletter" class="cta-button">Start Your Adventure</a>
-            <div class="hero-image">
-                <div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; text-align: center;">
-                    <div style="font-size: 5rem; margin-bottom: 1rem;">📚✨</div>
-                    <p style="font-size: 1rem; opacity: 0.8;">Preview your personalized storybook</p>
+        <div class="hero-content container">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span>✨</span> Trusted by 10,000+ Families
                 </div>
+                <h1>
+                    Create Magical Stories Where <span>Your Child Is The Hero</span>
+                </h1>
+                <p>
+                    Personalize enchanting books that spark imagination and create lasting memories. 
+                    Each story is uniquely crafted with your child's name, appearance, and interests.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#create" class="btn-primary btn-large">Create Your Story</a>
+                    <a href="#features" class="btn-secondary btn-large">See How It Works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">50k+</div>
+                        <div class="stat-label">Stories Created</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">★★★★★ Rating</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2min</div>
+                        <div class="stat-label">To Create</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="Child reading personalized book">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Parents Love StoryVerse</h2>
-                <p>We combine cutting-edge personalization technology with heartwarming storytelling to create books your family will treasure forever.</p>
-            </div>
+            <h2>How It Works</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Truly Personalized</h3>
-                    <p>Each book features your child's name, appearance, and personal details woven naturally into a captivating story that makes them feel special.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Educational Value</h3>
-                    <p>Stories that teach important life lessons, boost confidence, and encourage reading—all while your child is having too much fun to notice.</p>
+                    <div class="feature-icon">📝</div>
+                    <h3>Personalize</h3>
+                    <p>Add your child's name, choose their appearance, and select their adventure</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <h3>Beautiful Illustrations</h3>
-                    <p>Stunning, high-quality artwork on every page brings the story to life and keeps children engaged from cover to cover.</p>
+                    <h3>We Create</h3>
+                    <p>Our team crafts a unique story with beautiful illustrations featuring your child</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Enjoy</h3>
+                    <p>Receive your premium book and watch your child's face light up with joy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2>What Families Are Saying</h2>
-                <p>Join thousands of happy parents who have discovered the magic of personalized storytelling.</p>
-            </div>
+            <h2>What Parents Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p>"My daughter's face lit up when she saw her name in the story. She asks me to read it every night before bed. This is hands down the best gift I've ever given her."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <span>Mom of Emma, age 5</span>
-                        </div>
-                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"My daughter's face when she saw her name in the story was priceless. She reads it every night!"</p>
+                    <div class="testimonial-author">- Sarah M., New York</div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p>"The quality is amazing and the story is so engaging. My son actually asks to read instead of watching TV. That's a parenting win! Highly recommend to all parents."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div class="author-info">
-                            <h4>James Davidson</h4>
-                            <span>Dad of Lucas, age 7</span>
-                        </div>
-                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Best gift ever! My son who hated reading now asks for his 'special book' every bedtime."</p>
+                    <div class="testimonial-author">- Michael R., London</div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="quote-icon">"</div>
-                    <p>"We ordered books for all three of our kids. Each one is unique and special. The customer service was fantastic and shipping was faster than expected."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MK</div>
-                        <div class="author-info">
-                            <h4>Maria Kozlova</h4>
-                            <span>Mom of three, ages 4-9</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div class="stars">★★★★★</div>
+                    <p>"The quality is amazing and the story is so engaging. Worth every penny. Will definitely order more!
+</p>
+<div class="testimonial-author">- Emma L., Sydney</div>
+</div>
+</div>
+</div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="newsletter">
-        <h2>Ready to Create Magic?</h2>
-        <p>Join our newsletter to get early access to new stories, exclusive discounts, and parenting tips delivered to your inbox.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing! We'll be in touch soon.');">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Get Started</button>
-        </form>
-    </section>
+<section class="cta" id="create">
+<div class="container">
+<h2>Start Creating Magic Today</h2>
+<p>Join thousands of parents creating unforgettable memories for their children</p>
+<form class="newsletter">
+<input type="email" placeholder="Enter your email" required>
+<button type="submit">Get Started</button>
+</form>
+</div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 StoryVerse Hub. All rights reserved. | Made with ❤️ for little heroes everywhere.</p>
-    </footer>
+<footer>
+<div class="container">
+<p>&copy; 2024 StoryVerse Hub. Creating magical memories for children worldwide.</p>
+</div>
+</footer>
 </body>
 </html>
