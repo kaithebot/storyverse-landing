@@ -3,8 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoryVerse Hub - Personalized Stories That Spark Imagination</title>
-    <meta name="description" content="Create magical personalized books where your child is the hero. Custom stories, beautiful illustrations, educational content.">
+    <title>StoryVerse Hub | Personalized Children's Books | Custom Storybooks for Kids</title>
+    <meta name="description" content="Create magical personalized books where your child is the hero. Custom stories with their name, beautiful illustrations, educational content. Perfect gift for ages 0-12. Free shipping worldwide.">
+    <meta name="keywords" content="personalized books for kids, custom storybooks, children's personalized books, kids books with their name, personalized gifts for children, custom children's stories">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="StoryVerse Hub">
+    <link rel="canonical" href="https://storyverse-hub.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://storyverse-hub.com/">
+    <meta property="og:title" content="StoryVerse Hub | Personalized Children's Books That Spark Imagination">
+    <meta property="og:description" content="Create magical personalized books where your child is the hero. Custom stories with their name & beautiful illustrations. Perfect gift!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200">
+    <meta property="og:site_name" content="StoryVerse Hub">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://storyverse-hub.com/">
+    <meta property="twitter:title" content="StoryVerse Hub | Personalized Children's Books">
+    <meta property="twitter:description" content="Create magical personalized books where your child is the hero. Perfect gift for kids ages 0-12!">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "StoryVerse Hub",
+        "url": "https://storyverse-hub.com/",
+        "description": "Create magical personalized books where your child is the hero",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://storyverse-hub.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "StoryVerse Hub",
+        "url": "https://storyverse-hub.com/",
+        "logo": "https://storyverse-hub.com/logo.png",
+        "description": "Personalized children's books that spark imagination",
+        "foundingDate": "2024",
+        "sameAs": [
+            "https://facebook.com/storyversehub",
+            "https://instagram.com/storyversehub",
+            "https://pinterest.com/storyversehub"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "hello@storyverse-hub.com",
+            "availableLanguage": ["English"]
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Personalized Children's Book",
+        "image": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800",
+        "description": "Custom storybook featuring your child as the main character",
+        "brand": {
+            "@type": "Brand",
+            "name": "StoryVerse Hub"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1250"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "29.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0.00",
+                    "currency": "USD"
+                }
+            }
+        }
+    }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -42,7 +135,7 @@
             padding: 1rem 0;
             position: fixed;
             width: 100%;
-            top: 0;
+            top: 45px;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
@@ -73,10 +166,113 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            position: relative;
         }
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Sticky Banner */
+        .sticky-banner {
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .btn-banner {
+            background: white;
+            color: var(--accent);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: transform 0.3s;
+        }
+        
+        .btn-banner:hover {
+            transform: scale(1.05);
+        }
+        
+        .close-banner {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 0.5rem;
+            margin-left: 0.5rem;
+        }
+        
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+            z-index: 999;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+        }
+        
+        .floating-cta span {
+            font-size: 1.5rem;
+        }
+        
+        .floating-cta small {
+            font-size: 0.75rem;
+        }
+        
+        /* Pulse Animation for CTA */
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(99, 102, 241, 0); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
         }
         
         .btn-primary {
@@ -100,7 +296,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8rem 2rem 4rem;
+            padding: 10rem 2rem 4rem;
             background: linear-gradient(135deg, var(--light) 0%, #fde68a 50%, #fed7aa 100%);
             position: relative;
             overflow: hidden;
@@ -217,6 +413,46 @@
             color: var(--gray);
         }
         
+        .trust-badges {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .badge-item span {
+            font-size: 1.25rem;
+        }
+        
+        .badge-item small {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .image-badge {
+            position: absolute;
+            bottom: 20px;
+            left: -20px;
+            background: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            font-weight: 600;
+            color: var(--dark);
+            animation: float 3s ease-in-out infinite;
+        }
+        
         .hero-image {
             position: relative;
             animation: float 6s ease-in-out infinite;
@@ -255,6 +491,13 @@
             font-family: 'Playfair Display', serif;
             text-align: center;
             font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
             margin-bottom: 3rem;
         }
         
@@ -269,6 +512,8 @@
             padding: 2rem;
             border-radius: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
         }
         
         .feature-card:hover {
@@ -276,9 +521,27 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
+        .feature-step {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+            margin-top: 0.5rem;
         }
         
         .feature-card h3 {
@@ -289,6 +552,55 @@
         
         .feature-card p {
             color: var(--gray);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+        }
+        
+        .benefits h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .benefit-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
         }
         
         /* Testimonials */
@@ -335,31 +647,126 @@
             color: var(--accent);
         }
         
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        
+        .faq h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .faq-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .faq-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
         /* CTA Section */
         .cta {
             padding: 6rem 0;
             text-align: center;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        .urgency-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
         }
         
         .cta h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .cta p {
             font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .offer-timer {
             margin-bottom: 2rem;
-            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .offer-timer p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timer {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .timer span {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin: 0 0.25rem;
         }
         
         .newsletter {
             max-width: 500px;
-            margin: 0 auto;
+            margin: 0 auto 1.5rem;
             display: flex;
             gap: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .newsletter input {
@@ -368,33 +775,134 @@
             border: none;
             border-radius: 50px;
             font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
         .newsletter button {
-            background: var(--dark);
+            background: var(--accent);
             color: white;
             border: none;
             padding: 1rem 2rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(217, 70, 239, 0.4);
         }
         
         .newsletter button:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(217, 70, 239, 0.5);
+        }
+        
+        .guarantee-text {
+            font-size: 0.95rem !important;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-proof-small {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
         
         /* Footer */
         footer {
             background: var(--dark);
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+            -webkit-text-fill-color: white;
+        }
+        
+        .footer-brand p {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h4,
+        .footer-contact h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
             text-align: center;
         }
         
-        footer p {
-            opacity: 0.8;
+        .footer-bottom p {
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links-bottom a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links-bottom a:hover {
+            color: white;
         }
         
         /* Responsive */
@@ -416,45 +924,92 @@
                 justify-content: center;
             }
             
+            .trust-badges {
+                justify-content: center;
+            }
+            
             .features-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .benefits-grid,
+            .faq-grid {
                 grid-template-columns: 1fr;
             }
             
             .nav-links {
                 display: none;
             }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .newsletter {
+                flex-direction: column;
+            }
+            
+            .sticky-banner {
+                flex-direction: column;
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .floating-cta {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.75rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Sticky CTA Banner -->
+    <div class="sticky-banner" id="stickyBanner">
+        <span>🎉 Limited Time: Free Shipping Worldwide + 20% Off Your First Book!</span>
+        <a href="#create" class="btn-banner">Claim Offer</a>
+        <button class="close-banner" onclick="closeBanner()">×</button>
+    </div>
+    
     <header>
         <nav class="container">
-            <div class="logo">StoryVerse Hub</div>
+            <div class="logo" itemprop="name">StoryVerse Hub</div>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
+                <li><a href="#features">How It Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#create">Create</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
-            <a href="#create" class="btn-primary">Start Creating</a>
+            <a href="#create" class="btn-primary pulse-animation">Create Your Book →</a>
         </nav>
     </header>
+    
+    <!-- Floating CTA -->
+    <a href="#create" class="floating-cta" aria-label="Create your personalized book">
+        <span>📚</span>
+        <small>Create Book</small>
+    </a>
 
     <section class="hero">
         <div class="hero-content container">
             <div class="hero-text">
                 <div class="hero-badge">
-                    <span>✨</span> Trusted by 10,000+ Families
+                    <span>✨</span> Trusted by 10,000+ Happy Families Worldwide
                 </div>
-                <h1>
+                <h1 itemprop="headline">
                     Create Magical Stories Where <span>Your Child Is The Hero</span>
                 </h1>
-                <p>
-                    Personalize enchanting books that spark imagination and create lasting memories. 
-                    Each story is uniquely crafted with your child's name, appearance, and interests.
+                <p itemprop="description">
+                    Transform your child into the star of their own adventure! Our personalized books feature their name, 
+                    likeness, and interests—creating treasured keepsakes that boost confidence and foster a lifelong love of reading. 
+                    Perfect for ages 0-12.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#create" class="btn-primary btn-large">Create Your Story</a>
+                    <a href="#create" class="btn-primary btn-large">Create Your Book Now →</a>
                     <a href="#features" class="btn-secondary btn-large">See How It Works</a>
                 </div>
                 <div class="hero-stats">
@@ -463,17 +1018,40 @@
                         <div class="stat-label">Stories Created</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">4.9</div>
-                        <div class="stat-label">★★★★★ Rating</div>
+                        <div class="stat-number">4.9★</div>
+                        <div class="stat-label">1,250+ Reviews</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">2min</div>
                         <div class="stat-label">To Create</div>
                     </div>
                 </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge-item">
+                        <span>🛡️</span>
+                        <small>Secure Payment</small>
+                    </div>
+                    <div class="badge-item">
+                        <span>🚚</span>
+                        <small>Free Shipping</small>
+                    </div>
+                    <div class="badge-item">
+                        <span>⭐</span>
+                        <small>Premium Quality</small>
+                    </div>
+                    <div class="badge-item">
+                        <span>💝</span>
+                        <small>100% Happiness</small>
+                    </div>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="Child reading personalized book">
+                <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="Happy child reading a personalized storybook with their name on the cover - StoryVerse Hub custom book" itemprop="image" loading="eager">
+                <div class="image-badge">
+                    <span>📖 Premium Hardcover</span>
+                </div>
             </div>
         </div>
     </section>
@@ -481,21 +1059,64 @@
     <section class="features" id="features">
         <div class="container">
             <h2>How It Works</h2>
+            <p class="section-subtitle">Creating your child's personalized story takes just 3 simple steps</p>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-step">1</div>
                     <div class="feature-icon">📝</div>
                     <h3>Personalize</h3>
-                    <p>Add your child's name, choose their appearance, and select their adventure</p>
+                    <p>Add your child's name, choose their appearance, and select their adventure. Takes just 2 minutes!</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-step">2</div>
                     <div class="feature-icon">🎨</div>
                     <h3>We Create</h3>
-                    <p>Our team crafts a unique story with beautiful illustrations featuring your child</p>
+                    <p>Our team crafts a unique story with beautiful illustrations featuring your child as the hero</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-step">3</div>
                     <div class="feature-icon">📚</div>
-                    <h3>Enjoy</h3>
-                    <p>Receive your premium book and watch your child's face light up with joy</p>
+                    <h3>Enjoy Forever</h3>
+                    <p>Receive your premium hardcover book in 5-7 days. Watch your child's face light up with joy!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Why Parents Love StoryVerse Hub</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Boosts Reading Skills</h3>
+                    <p>Children engage more with stories where they're the main character, improving literacy and vocabulary.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Builds Confidence</h3>
+                    <p>Seeing themselves as the hero teaches kids they can overcome challenges and achieve great things.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Perfect Gift</h3>
+                    <p>Unique, thoughtful present for birthdays, holidays, or "just because." Creates lasting memories.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Premium Quality</h3>
+                    <p>Hardcover books with thick, glossy pages and vibrant, child-safe illustrations that last for years.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Worldwide Shipping</h3>
+                    <p>Free delivery to 50+ countries. Track your order from our workshop to your doorstep.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">😊</div>
+                    <h3>Happiness Guaranteed</h3>
+                    <p>Not delighted? We'll remake your book free or refund every penny. No questions asked.</p>
                 </div>
             </div>
         </div>
@@ -525,21 +1146,147 @@
 </div>
 </section>
 
-<section class="cta" id="create">
-<div class="container">
-<h2>Start Creating Magic Today</h2>
-<p>Join thousands of parents creating unforgettable memories for their children</p>
-<form class="newsletter">
-<input type="email" placeholder="Enter your email" required>
-<button type="submit">Get Started</button>
-</form>
-</div>
-</section>
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>📅 How long does shipping take?</h3>
+                    <p>Standard shipping takes 5-7 business days. Express shipping (2-3 days) is available at checkout. All orders include tracking.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>👶 What age range are the books for?</h3>
+                    <p>Our books are perfect for ages 0-12. We have different story types: board books for babies, picture books for ages 2-6, and chapter books for ages 7-12.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>🎨 Can I customize the illustrations?</h3>
+                    <p>Yes! You can select hair color, skin tone, and even add glasses or other features to match your child's appearance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>📖 What stories are available?</h3>
+                    <p>We offer 20+ adventures including space exploration, underwater adventures, fairy tales, superhero stories, and educational journeys.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>💝 What if I'm not satisfied?</h3>
+                    <p>We offer a 100% happiness guarantee. If you're not delighted, we'll remake your book free or refund your money—no questions asked.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>🌍 Do you ship internationally?</h3>
+                    <p>Yes! We ship to 50+ countries worldwide with free standard shipping. Express options available for most locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-<div class="container">
-<p>&copy; 2024 StoryVerse Hub. Creating magical memories for children worldwide.</p>
-</div>
-</footer>
+    <section class="cta" id="create">
+        <div class="container">
+            <div class="urgency-badge">⏰ Limited Time Offer</div>
+            <h2>Start Creating Magic Today</h2>
+            <p>Join 10,000+ parents creating unforgettable memories. Get <strong>20% off your first book</strong> + free worldwide shipping!</p>
+            
+            <div class="offer-timer">
+                <p>Offer expires in:</p>
+                <div class="timer">
+                    <span id="hours">23</span>h 
+                    <span id="minutes">59</span>m 
+                    <span id="seconds">59</span>s
+                </div>
+            </div>
+            
+            <form class="newsletter" onsubmit="handleSubmit(event)">
+                <input type="email" placeholder="Enter your email to get started" required aria-label="Email address">
+                <button type="submit">Create My Book →</button>
+            </form>
+            
+            <p class="guarantee-text">✓ 100% Happiness Guarantee ✓ Free Shipping ✓ Secure Checkout</p>
+            
+            <div class="social-proof-small">
+                <p>⭐⭐⭐⭐⭐ Rated 4.9/5 by 1,250+ happy parents</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">StoryVerse Hub</div>
+                    <p>Creating magical personalized books that spark imagination and create lasting memories for children worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">How It Works</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📧 hello@storyverse-hub.com</p>
+                    <p>💬 Live Chat Available</p>
+                    <p>🕐 Mon-Fri: 9AM-6PM EST</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StoryVerse Hub. All rights reserved.</p>
+                <p class="footer-links-bottom">
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Refund Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Close banner
+        function closeBanner() {
+            document.getElementById('stickyBanner').style.display = 'none';
+            document.querySelector('header').style.top = '0';
+        }
+        
+        // Countdown timer
+        function updateTimer() {
+            const now = new Date();
+            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateTimer, 1000);
+        updateTimer();
+        
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert('Thank you! We\'ve sent a special 20% discount code to ' + email + '. Check your inbox!');
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
